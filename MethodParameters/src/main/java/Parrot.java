@@ -13,7 +13,7 @@ public class Parrot {
      */
     public String copy(String text){
         
-        System.out.println(text);
+        //System.out.println(text);
         return text;
     }
 }
