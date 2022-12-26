@@ -12,8 +12,8 @@ public class Parrot {
      * @return text.
      */
     public String copy(String text){
-        String str = copy("hello");
-        System.out.println(str);
+        
+        System.out.println("Hello"+text);
         return text;
     }
 }
