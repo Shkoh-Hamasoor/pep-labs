@@ -8,6 +8,10 @@ public class CombineStrings {
      * @return the combination of strings a and b.
      */
     public String combine(String a, String b){
-        return "";
+         a = "hello";
+         b = "person";
+        String bigstr = a + b;  
+        System.out.println(bigstr); 
+        return "hello how are you doing?" + bigstr;
     }
 }
