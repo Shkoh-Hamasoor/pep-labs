@@ -9,19 +9,11 @@ public class CombineStrings {
      */
     public String combine(String a, String b){
      
-        a = "abc";
-        b = "xyz";
+    
 
-        a = "123";
-        b = "456";
-        
+        return a+b;
 
-        String combineString = a+b;
-        
-
-       return combineString;
     }
-
-
+    
 
 }
