@@ -11,11 +11,15 @@ public class CombineStrings {
      
         a = "abc";
         b = "xyz";
+
+        a = "123";
+        b = "456";
         
 
         String combineString = a+b;
-       
-        return a+b;
+        
+
+       return combineString;
     }
 
 

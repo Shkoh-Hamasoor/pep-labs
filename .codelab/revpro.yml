@@ -102,8 +102,8 @@
     :count_tests: 2
     :count_tests_passed: 1
     :tests:
-      combineTest1: 1
-      combineTest2: 0
+      combineTest1: 0
+      combineTest2: 1
   IfStatement:
     :Week: 1
     :Order: 6
