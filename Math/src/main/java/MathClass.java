@@ -1,5 +1,4 @@
-import java.lang.Object;
-import java.lang.Math;
+
 public class MathClass {
     /**
      * The Math class contains utility methods that can be used for calculations like exponents, rounding, random
