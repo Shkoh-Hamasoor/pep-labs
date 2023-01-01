@@ -17,7 +17,9 @@ public class ReturnArrayContents {
      * return str;
      *
      * Where i represents a variable that is used to visit every number between 0 and the length of nums. Inside of the
-     * for loop, you will need to write code that appends elements from nums to str, one by one, in the format described
+     * for loop, 
+     * 
+     * you will need to write code that appends elements from nums to str, one by one, in the format described
      * above.
      *
      * After completing the problem, I recommend using your IDE's debugger to walk through the loop
@@ -28,6 +30,10 @@ public class ReturnArrayContents {
      * @return a string representation of all values of nums, with the values separated by spaces.
      */
     public String arrayToString(int[] nums){
-        return "";
+        String str ="";
+        for (int i=0; i<nums.length;i++){
+            str += nums[i] + " ";
+        }
+        return str;
     }
 }
