@@ -23,8 +23,9 @@ public class BankService {
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
+        this.balance += amount;
+        }
 
-    }
 
     /**
      * TODO: implement functionality to decrease the user's balance by an amount.
@@ -32,14 +33,20 @@ public class BankService {
      * @param amount the amount to be withdrawn.
      */
     public void withdraw(double amount){
-
+        if (amount > balance ){
+            System.out.println("cant withdraw");
+        }
+        else{
+            this.balance -=amount;
+        }
     }
+
 
     /**
      * There is no need to change this method, it will be used in testing and in the menu class.
      * @return the user's balance.
      */
     public double getBalance(){
-        return 0;
+        return this.balance;
     }
 }
