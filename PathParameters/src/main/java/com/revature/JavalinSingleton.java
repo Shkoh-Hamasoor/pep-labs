@@ -8,15 +8,17 @@ public class JavalinSingleton {
         Javalin app = Javalin.create();
         
         /**
-         * Assignment: retrieve the variable "first" from the path parameter and send it in the response body. Produce
+         * Assignment: retrieve the variable "first" from the path parameter and send it in the response body. 
+         * Produce
          * the response using:
          *      ctx.result(StringVariable);
          * 
          * Note: Please refer to the "PathParameters.MD" file for more assistance if needed.
          */
-        app.get("/firstname/{first}", ctx -> {
-            
+        app.get("/firstname/{first}", ctx ->
+            {String firstname = ctx.pathParam("first"); 
             //write code here
+            ctx.result(firstname);
 
         });
 
