@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class FlightDAO {
 
-
+//select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES";
 
     /**
      * TODO: Retrieve all flights from the flight table.
@@ -33,7 +33,7 @@ public class FlightDAO {
         List<Flight> flights = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "SELECT * FROM flight ";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
