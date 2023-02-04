@@ -26,7 +26,7 @@ public class BookDAO {
     /**
      * TODO: retrieve all books from the Book table.
      * You only need to change the sql String.
-     * @return all Authors.
+     * @return all Authors.p
      */
     public List<Book> getAllBooks(){
         Connection connection = ConnectionUtil.getConnection();
