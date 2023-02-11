@@ -13,17 +13,20 @@ public class LargestSum {
      */
     public int bigSum(List<Integer> nums){
         
-       Integer max = nums.get(1);
+       Integer max = nums.get(0);
+       Integer secondLargest =nums.get(0);
        for(int i=0;i<nums.size();i++){
 
         if(nums.get(i)>max){
+            //secondLargest += max;
             max +=nums.get(i);
             
         }
+        
     
 
        }
-       return max;
+       return max+secondLargest;
       
     }
 }
