@@ -1,3 +1,5 @@
+import kotlin.io.OnErrorAction;
+
 /**
  * The test cases for this class use methods called .equals which aren't written anywhere in this class. How?
  * All objects have a method called .equals and a method called toString - they are inherited from the Object class,
@@ -55,10 +57,54 @@ public class SampleClass {
     public int a;
     public boolean b;
 
-    //    implement a custom .equals(SampleClass other){} method here.
 
+
+//     For .equals, two objects will be considered equal if a and b are equal in both objects. .equals should take in a
+//  * parameter that is another SampleClass object, and access its version of a and b. Return true if the values
+//  * of a and b are equal in both objects, and false otherwise.
+//  *
+    @Override
+    public boolean equals(Object object){
+        if(this==object){
+            return true;
+        }
+        if(object==null){
+            return false;
+        }
+        if(getClass()!=object.getClass()){
+            return false;
+        }
+        
+        SampleClass other = (SampleClass) object;
+        if(a!=other.a){
+            return false;
+        }
+        if(b!=other.b){
+            return false;
+        }
+    return true;
+    
+
+
+    }
+    
+//     .toString addendum: What is the default behavior of toString? By default, toString just calls another Object class
+//  * method, named .hashcode, which generates a random value that can be used to identify this Object. Without a custom
+//  * toString that overrides the Parent class toString, toString would return something like SampleClass@4063272.
+//  *
+    @Override
+    public String toString(){
+        return "SampleClass " + a + b;
+    }
+
+
+    //    implement a custom .equals(SampleClass other){} method here.
 
     //    implement a custom .toString(){} method here.
 
     
+    
+
+
 }
+
