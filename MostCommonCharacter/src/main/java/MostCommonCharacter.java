@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,16 +15,17 @@ public class MostCommonCharacter {
      * @return the most common character within str.
      */
     public char recurringChar(String str) {
-        int count = 0;
-        HashMap<Character, Integer> temp = new HashMap<Character, Integer>();
 
-       for(int i=0; i<str.length();i++){
+        
+        HashMap<Character, Integer> temp = new HashMap<>();
+        char charArr [] = str.toCharArray();
 
+            for(int i =0; i< charArr.length;i++){
             char ch = str.charAt(i);
 
             if(temp.containsKey(ch)){
 
-                temp.put(ch, temp.get(ch) +1);
+                temp.put(ch, temp.get(ch)+1);
             }
 
             else{
@@ -30,12 +33,15 @@ public class MostCommonCharacter {
                 temp.put(ch,1);
             }
         }
+       
         char ch = str.charAt(0);
         for(Map.Entry<Character, Integer> entry : temp.entrySet()){
-            System.out.println(entry.getKey() + "=" + entry.getValue()); 
            
-        }
+            if(entry.getValue() > temp.get(ch)){
+                ch = entry.getKey();
+            }
+
+            }
         return ch;
-       
     }
 }
